@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conferences & Workshops — SIRE</title>
+  <meta name="description" content="SIRE conferences, workshops, and training events with materials, slides, and registration links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root { color-scheme: light dark; }
+    html { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .glass { backdrop-filter: saturate(150%) blur(8px); background: rgba(15, 23, 42, .5); }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-orange-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3 font-semibold text-slate-900">
+          <div class="logo-wrap">
+            <img src="images/sire.png" alt="SIRE logo" class="h-16 w-16" />
+          </div>
+        </a>
+        
+        <nav aria-label="Primary" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="hover:text-blue-900" href="/about.html" aria-current="page">About</a></li>
+            <li><a class="hover:text-blue-900" href="/conferences_workshops.html">Conferences & Workshops</a></li>
+            <li><a class="hover:text-blue-900" href="/publications.html">Publications</a></li>
+            <li><a class="hover:text-blue-900" href="/courses.html">Courses</a></li>
+            <li><a class="hover:text-blue-900" href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <img src="images/MSU_Logo.png" alt="" class="hidden md:block" style="height:50px;">
+        </div>
+        <button class="md:hidden p-2 rounded-lg border border-orange-300" aria-label="Open menu" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+          <img src="images/MSU_Logo.png" alt="" class="w-5 h-5" >
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="md:hidden hidden border-t border-orange-200 bg-white">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Mobile">
+        <ul class="py-3 space-y-2 text-sm">
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-orange-100" href="/about.html" aria-current="page">About</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-orange-100" href="/conferences_workshops.html">Conferences & Workshops</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-orange-100" href="/publications.html">Publications</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-orange-100" href="/courses.html">Courses</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-orange-100" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden bg-orange-900">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative py-16 sm:py-24">
+        <p class="text-blue-200 text-sm font-semibold tracking-wider uppercase">Events</p>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-3xl">Conferences & Workshops</h1>
+        <p class="mt-5 max-w-2xl text-blue-100/90">Hands-on pedagogy (ECP), research methods, and practitioner training—on campus and online.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#upcoming" class="rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold shadow hover:bg-orange-50">Upcoming</a>
+          <a href="#past" class="rounded-xl bg-transparent ring-1 ring-white/70 text-white px-4 py-2 font-semibold hover:bg-white/10">Past Events</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming -->
+  <main id="main">
+    <section id="upcoming" class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <h2 class="text-2xl sm:text-3xl font-bold">Upcoming</h2>
+          <a href="#past" class="text-blue-900 font-semibold">See past events →</a>
+        </div>
+        <p class="mt-4 text-slate-600">No events are scheduled right now. Join the mailing list to get notified.</p>
+        <form class="mt-6 flex max-w-md gap-2" onsubmit="event.preventDefault(); alert('Thanks! You\'re on the list.');">
+          <input type="email" required placeholder="you@example.com" class="flex-1 rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          <button class="rounded-xl bg-orange-700 text-white px-4 py-2 font-semibold hover:bg-orange-800">Notify me</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Past Events -->
+    <section id="past" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <h2 class="text-2xl sm:text-3xl font-bold">Past Events</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- 2021 Virtual Workshop (from original site) -->
+          <article class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <div class="h-40 bg-[url('https://static.wixstatic.com/media/cb9e31_1b49a4c80e944967a3d886bfe7c59d7d~mv2.png/v1/fill/w_516,h_288,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cb9e31_1b49a4c80e944967a3d886bfe7c59d7d~mv2.png')] bg-cover bg-center"></div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Experiment Centric Pedagogy & Home‑based Hands‑on Learning in STEM</h3>
+              <p class="mt-2 text-sm text-slate-600">Summer 2021 — Virtual workshop</p>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a class="rounded-lg bg-orange-700 text-white px-3 py-1.5 text-sm font-semibold hover:bg-orange-800" href="https://www.surveymonkey.com/r/9M6DVJ3" target="_blank" rel="noopener">Post‑event Survey</a>
+                <a class="rounded-lg ring-1 ring-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-50" href="https://4aa71dbe-f4e5-4e3f-8a24-f1016e4360c6.filesusr.com/ugd/7104c9_5e5490d42aa949b5ab9b8387ffdf32a5.pdf" target="_blank" rel="noopener">Flyer (PDF)</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Placeholder for more historical entries -->
+          <article class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <div class="h-40 bg-[url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">AI for Environmental Sensing — Mini‑Symposium</h3>
+              <p class="mt-2 text-sm text-slate-600">2023 — Panel + lightning talks</p>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a class="rounded-lg ring-1 ring-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-50" href="#">Agenda (PDF)</a>
+                <a class="rounded-lg ring-1 ring-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-50" href="#">Slides</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <div class="h-40 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Workshop on Data‑Driven Decision‑Making in Infrastructure</h3>
+              <p class="mt-2 text-sm text-slate-600">2019 — Hands‑on tutorials</p>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a class="rounded-lg ring-1 ring-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-50" href="#">Materials</a>
+                <a class="rounded-lg ring-1 ring-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-50" href="#">Photos</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative isolate">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="rounded-3xl bg-gradient-to-br from-blue-900 to-orange-900 p-8 sm:p-10 text-white shadow-lg">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold">Host a workshop with us</h2>
+              <p class="mt-2 text-blue-100">Faculty and community partners—reach out to co‑design custom training or mini‑symposia.</p>
+            </div>
+            <div class="flex gap-3">
+              <a href="/contact.html" class="rounded-xl bg-white px-4 py-2 text-slate-900 font-semibold hover:bg-slate-100">Contact</a>
+              <a href="#upcoming" class="rounded-xl border border-white/70 px-4 py-2 font-semibold hover:bg-white/10">Propose an event</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <a href="/" class="flex items-center gap-2 font-semibold text-slate-900">
+            <img src="/assets/logo.svg" alt="SIRE logo" class="h-8 w-8" />
+            <span>SIRE</span>
+          </a>
+          <p class="mt-3 text-sm text-slate-600 max-w-xs">Advancing science, engineering, and society through research, education, and partnerships.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold">Explore</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:text-blue-900" href="/about.html">About</a></li>
+            <li><a class="hover:text-blue-900" href="/publications.html">Publications</a></li>
+            <li><a class="hover:text-blue-900" href="/conferences_workshops.html">Conferences & Workshops</a></li>
+            <li><a class="hover:text-blue-900" href="/courses.html">Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold">Resources</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:text-blue-900" href="#past">Event materials</a></li>
+            <li><a class="hover:text-blue-900" href="/publications.html">Publications</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold">Contact</h3>
+          <address class="not-italic mt-3 text-sm text-slate-600">
+            1700 East Cold Spring Lane<br/>Baltimore, MD 21251<br/>
+            <a class="text-blue-900 font-semibold" href="mailto:oludare.owolabi@morgan.edu">oludare.owolabi@morgan.edu</a>
+          </address>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-slate-500">© <span id="year"></span> SIRE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
