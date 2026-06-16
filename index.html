@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SIRE — Emerging Tech & Applied STEM</title>
+  <title>SIRE :  Emerging Tech & Applied STEM</title>
   <meta name="description" content="Department hub for research, publications, conferences & workshops, and student opportunities in Emerging Tech & Applied STEM." />
-  <meta property="og:title" content="SIRE — Research • Publications • Conferences" />
+  <meta property="og:title" content="SIRE :  Research • Publications • Conferences" />
   <meta property="og:description" content="Explore programs, labs, publications, and upcoming conferences & workshops." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0f172a" />
@@ -144,26 +144,51 @@
   <section class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <dl class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm">
-          <dt class="text-sm">Active Labs</dt>
-          <dd class="mt-2 text-3xl font-extrabold">6</dd>
-        </div>
-        <div class="rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm">
-          <dt class="text-sm">Publications</dt>
-          <dd class="mt-2 text-3xl font-extrabold">120+</dd>
-        </div>
-        <div class="rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm">
-          <dt class="text-sm">Students Mentored</dt>
-          <dd class="mt-2 text-3xl font-extrabold">250+</dd>
-        </div>
-        <div class="rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm">
+        <button data-modal="labs"
+        class="stat-card text-left rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm hover:shadow-lg transition">
+        <dt class="text-sm">Active Labs</dt>
+        <dd class="mt-2 text-3xl font-extrabold">6</dd>
+      </button>
+        <button data-modal="publications"
+        class="stat-card text-left rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm hover:shadow-lg transition">
+        <dt class="text-sm">Publications</dt>
+        <dd class="mt-2 text-3xl font-extrabold">120+</dd>
+        </button>
+        <button data-modal="students"
+        class="stat-card text-left rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm hover:shadow-lg transition">
+        <dt class="text-sm">Students Mentored</dt>
+        <dd class="mt-2 text-3xl font-extrabold">250+</dd>
+      </button>
+        <a href="#" class="rounded-2xl text-slate-600 border border-orange-200 p-6 shadow-sm">
           <dt class="text-sm">Industry Partners</dt>
           <dd class="mt-2 text-3xl font-extrabold">15</dd>
-        </div>
+        </a>
       </dl>
     </div>
   </section>
 
+
+  <!-- Modal -->
+<div id="statModal"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+
+  <div class="bg-white rounded-3xl max-w-2xl w-full mx-4 shadow-2xl">
+
+    <div class="flex items-center justify-between border-b p-6">
+      <h2 id="modalTitle" class="text-2xl font-bold text-slate-800"></h2>
+
+      <button id="closeModal"
+        class="text-slate-500 hover:text-red-500 text-2xl">
+        &times;
+      </button>
+    </div>
+
+    <div class="p-6">
+      <div id="modalContent"></div>
+    </div>
+
+  </div>
+</div>
 
 <!-----------------------------------------------Platform Grid----------------------------------------------------->
   <section id="highlights" class="bg-orange-50">
@@ -174,7 +199,7 @@
     <div class="main" role="main">
     
       <div class="flex items-end justify-between flex-wrap gap-4">
-        <h2 class="text-2xl text-dark sm:text-3xl font-bold mb-6 tracking-tight">Adopted in 6 STEM Disciplines</h2>
+        <h2 class="text-2xl text-dark sm:text-3xl font-bold mb-6 tracking-tight">Research Fields</h2>
     </div>
     <ul class="stem-labs">
         <li style="background-image:url(images/industrial_eng.jpg);">
@@ -291,7 +316,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-            <span class="title" style="color: #fff;">Industrial  <br>Engineering</span>
+            <span class="title" style="color: #fff;">Geotechnical Engineering & <br>Pavement Design</span>
             </a></li>
         <li style="background-image:url(images/civil_eng.jpg);"><a href="civil.html" ><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="184.000000pt" height="180.000000pt" viewBox="0 0 184.000000 180.000000"
@@ -405,7 +430,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-        <span class="title" style=" color: #fff">Civil <br>Engineering</span></a></li>
+        <span class="title" style=" color: #fff">Airport Resilience <br>& <br> Digital Twins</span></a></li>
         <li style="background-image:url(images/td.jpg);"><a href="transport.html"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="184.000000pt" height="180.000000pt" viewBox="0 0 184.000000 180.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -518,7 +543,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-        <span class="title" style=" color: #fff">Transportation <br>Engineering</span></a></li>
+        <span class="title" style=" color: #fff"> ⁠Sustainable Infrastructure <br>Materials </span></a></li>
         <li style="background-image:url(images/biology.jpg);"><a href="biology.html"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="184.000000pt" height="180.000000pt" viewBox="0 0 184.000000 180.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -631,7 +656,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-        <span class="title" style=" color: #fff">Biology<br></span></a></li>
+        <span class="title" style=" color: #fff">⁠Digital Engineering<br> & <br> Emerging Technology</span></a></li>
         <li style="background-image:url(images/chemistry.jpg);"><a href="chemistry.html"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="184.000000pt" height="180.000000pt" viewBox="0 0 184.000000 180.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -744,7 +769,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-        <span class="title" style=" color: #fff">Chemistry<br></span></a></li>
+        <span class="title" style=" color: #fff"> ⁠Engineering Education <br>in <br>STEM Fields</span></a></li>
         <li style="background-image:url(images/physics.jpg);"><a href="physics.html"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="184.000000pt" height="180.000000pt" viewBox="0 0 184.000000 180.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -857,7 +882,7 @@
         <path d="M1410 56 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
         </g>
         </svg>
-        <span class="title" style=" color: #fff">Physics<br></span></a></li>
+        <span class="title" style=" color: #fff">⁠Transportation Engineering <br>& Smart Innovation</span></a></li>
     </ul>
     <br>
     </div>
@@ -1038,15 +1063,177 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
    <!--JAVASCRIPT CODE-->
-  <script>
-      new Swiper(".progress-slide-carousel", {
-      loop: true,
-      speed: 1600,
-      parallax: true,
-      effect: "fade", // or "slide" if you prefer
-      autoplay: { delay: 3200, disableOnInteraction: false },
-      pagination: { el: ".progress-slide-carousel .swiper-pagination", type: "progressbar" },
-    });
+    <script>
+      const modal = document.getElementById("statModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalContent = document.getElementById("modalContent");
+
+      const modalData = {
+
+        labs: {
+          title: "Active Research Labs",
+          content: `
+            <p class="text-slate-600 mb-4">
+              ETASTEM currently operates six active interdisciplinary laboratories.
+            </p>
+
+            <ul class="list-disc ml-5 space-y-2">
+              <li>Transportation Analytics Lab</li>
+              <li>Smart Infrastructure Lab</li>
+              <li>AI & Data Science Lab</li>
+              <li>Environmental Sustainability Lab</li>
+              <li>STEM Education Innovation Lab</li>
+              <li>Systems Optimization Lab</li>
+            </ul>
+          `
+        },
+
+        publications: {
+          title: "Research Publications",
+          content: `
+            <p class="text-slate-600">
+              Our faculty and students have contributed more than
+              <strong>120 peer-reviewed publications</strong>
+              spanning engineering, computer science, biology,
+              transportation, sustainability, and STEM education.
+            </p>
+
+            <div class="mt-5">
+              <a href="publications.html"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-xl">
+                View Publications
+              </a>
+            </div>
+          `
+        },
+
+        students: {
+          title: "Students Mentored",
+          content: `
+            <p class="text-slate-600 mb-5">
+              More than <strong>250 students</strong> have participated in ETASTEM programs through research assistantships, capstone projects, internships, workshops, and mentoring initiatives.
+            </p>
+
+            <input
+              type="text"
+              id="studentSearch"
+              placeholder="Search student by name..."
+              class="w-full mb-5 rounded-xl border border-orange-200 px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            />
+
+            <div id="studentList" class="max-h-80 overflow-y-auto grid gap-2 pr-2">
+            </div> `
+        },
+        
+        partners: {
+          title: "Industry Partners",
+          content: `
+            <p class="text-slate-600">
+              ETASTEM collaborates with over
+              <strong>15 industry and government partners</strong>
+              to provide students with real-world experiences,
+              internships, and collaborative research opportunities.
+            </p>
+          `
+        }
+      };
+
+      document.querySelectorAll("[data-modal]").forEach(card => {
+        card.addEventListener("click", () => {
+          const key = card.dataset.modal;
+
+          modalTitle.innerHTML = modalData[key].title;
+          modalContent.innerHTML = modalData[key].content;
+
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+
+          if (key === "students") {
+            renderStudents();
+
+            const studentSearch = document.getElementById("studentSearch");
+            studentSearch.addEventListener("input", function () {
+              renderStudents(this.value);
+            });
+          }
+        });
+      });
+
+      document.getElementById("closeModal")
+        .addEventListener("click", closeModal);
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      function closeModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      const students = [
+  { name: "Pelumi Abiodun", linkedin: "https://www.linkedin.com/" },
+  { name: "Grace Balogun", linkedin: "https://www.linkedin.com/" },
+  { name: "Adeolu Banjo", linkedin: "https://www.linkedin.com/" },
+  { name: "Sarah Adeyemi", linkedin: "https://www.linkedin.com/" },
+  { name: "Michael Okegbola", linkedin: "https://www.linkedin.com/" },
+  { name: "Oluwafemi Ifesanmi", linkedin: "https://www.linkedin.com/" },
+  { name: "Blessing Sasanya", linkedin: "https://www.linkedin.com/" },
+  { name: "Akriti Dakhal", linkedin: "https://www.linkedin.com/" },
+  { name: "Jeremiah Akinlade", linkedin: "https://www.linkedin.com/" }
+  // Continue until all 250+ students are added
+];
+
+function renderStudents(filter = "") {
+  const studentList = document.getElementById("studentList");
+  if (!studentList) return;
+
+  const filteredStudents = students.filter(student =>
+    student.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
+  studentList.innerHTML = filteredStudents.map(student => `
+    <a
+      href="${student.linkedin}"
+      target="_blank"
+      rel="noopener"
+      class="block rounded-xl border border-slate-200 px-4 py-3 text-slate-700 hover:border-orange-300 hover:bg-orange-50 transition"
+    >
+      ${student.name}
+    </a>
+  `).join("");
+
+  if (filteredStudents.length === 0) {
+    studentList.innerHTML = `
+      <p class="text-slate-500">No student found.</p>
+    `;
+  }
+}
+    </script>
+
+
+   <script>
+     const statCards = document.querySelectorAll(".stat-card");
+     const modal = document.getElementById("statModal");
+     const modalTitle = document.getElementById("modalTitle");
+     const modalContent = document.getElementById("modalContent");
+     const closeModal = document.getElementById("closeModal");
+
+     statCards.forEach(card => {
+       card.addEventListener("click", () => {
+         const title = card.querySelector("dt").textContent;
+         const content = card.querySelector("dd").textContent;
+
+         modalTitle.textContent = title;
+         modalContent.textContent = content;
+
+         modal.classList.remove("hidden");
+       });
+     });
+
+     closeModal.addEventListener("click", () => {
+       modal.classList.add("hidden");
+     });
   </script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
