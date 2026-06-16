@@ -181,3 +181,25 @@
         top: -100px
     }
 }
+
+
+.stat-card {
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+#statModal {
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
